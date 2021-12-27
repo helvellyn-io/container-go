@@ -1,5 +1,11 @@
 # container-go
-Container actions using Golang Docker SDK - For use with Temporal build task queues. 
+[![Build Status]
+Container actions using Golang Docker SDK 
+
+- For use with Temporal build task queues. 
+  For guidance on how to run this as a Temporal task please refer to: 
+  * https://github.com/helvellyn-io/temporal-template
+
 
 ```
 * cd build 
