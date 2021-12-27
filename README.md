@@ -1,4 +1,6 @@
 # container-go
+[![Go](https://github.com/helvellyn-io/container-go/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/helvellyn-io/container-go/actions/workflows/build.yml)
+
 Container actions using Golang Docker SDK 
 
 - For use with Temporal build task queues. 
