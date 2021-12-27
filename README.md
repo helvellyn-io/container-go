@@ -10,12 +10,14 @@ Prototyping continuous integration for microservices using Golang and Temporal a
 
 
 ```
-* cd build 
-* make articats //gets build artifacts from Git repository.
-* make build    //build container.
-* make push     //pushes containre to registry.
-* make test     //runs ad-hoc testing.
-* make clean    //deletes artifacts.
+help:       help for this makefile.    
+--get-artifacts: will attempt to download the build artifacts as defined in vars.json "artifactProvider".
+--build-with-artifacts: will attempt to build a container using the Dockerfile artifacts from --get-artifacts
+--push-artifacts:  will attempt to push the build container to the registry decalted in vars.josn "registry"
+--test-build:   runs all tests
+--init-temporal-worker:  submits a temporal worker
+--start-temporal-worker:  starts the temporal worker 
+--clean:  deletes the downloded artifacts and built images.
 ```
 
 
