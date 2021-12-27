@@ -13,19 +13,26 @@ import (
 	"github.com/docker/docker/client"
 )
 
-func BuildImage(client client.Client, tags []string, dockerfile string) error {
-
+func InitDockerBuild() (client.Client, []string, string) {
+	//create docker client
 	client, err := client.NewClientWithOpts()
 	if err != nil {
 		log.Fatalf("Unable to create docker client: %s", err)
 	}
-
-	tags := []string{"this_is_a_imagename"}
+	//tags etc.
+	tags := []string{"helvellyn/TestImage"}
 	dockerfile := "/Users/dylanjohnson/go/src/github.com/helvellyn-io/container-go/build/Dockerfile"
-	err = docker.BuildImage(*client, tags, dockerfile)
+	//build
+	err = BuildImage(*client, tags, dockerfile)
 	if err != nil {
 		log.Println(err)
 	}
+
+	return *client, tags, dockerfile
+}
+
+func BuildImage(client client.Client, tags []string, dockerfile string) error {
+
 	ctx := context.Background()
 
 	// Create a buffer
@@ -33,7 +40,7 @@ func BuildImage(client client.Client, tags []string, dockerfile string) error {
 	tw := tar.NewWriter(buf)
 	defer tw.Close()
 
-	// Create a filereader
+	//Create a filereader
 	dockerFileReader, err := os.Open(dockerfile)
 	if err != nil {
 		return err
