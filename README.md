@@ -6,7 +6,7 @@ Prototyping continuous integration for microservices using Golang and Temporal a
 
 - For use with Temporal build task queues. 
   For guidance on how to run this as a Temporal task please refer to: 
-  * https://github.com/helvellyn-io/temporal-template
+  * https://github.com/helvellyn-io/temporal-weather
 
 
 ```
