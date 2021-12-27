@@ -8,6 +8,8 @@ Prototyping continuous integration for microservices using Golang with Temporal 
   For guidance on how to run this as a Temporal task please refer to: 
   * https://github.com/helvellyn-io/temporal-weather
 
+Instructions. 
+
 - build/makefile help 
 ```
 help:       help for this makefile.    
