@@ -1,4 +1,4 @@
-all: one two three
+all: artifacts build push test 
 
 artifacts:
 	downloading build artifacts .. 
@@ -10,7 +10,7 @@ push:
 	touch three
 test: 
 	running tests
-	go test ...
+	@go test ...
 	done ..
 
 clean:
