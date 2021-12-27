@@ -1,5 +1,5 @@
 # container-go
-[![Build Status]
+[![Build Status]Passing]
 Container actions using Golang Docker SDK 
 
 - For use with Temporal build task queues. 
