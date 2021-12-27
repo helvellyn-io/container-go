@@ -6,6 +6,7 @@ import (
 	"context"
 	"io"
 	"io/ioutil"
+	"log"
 	"os"
 
 	"github.com/docker/docker/api/types"
@@ -13,6 +14,18 @@ import (
 )
 
 func BuildImage(client client.Client, tags []string, dockerfile string) error {
+
+	client, err := client.NewClientWithOpts()
+	if err != nil {
+		log.Fatalf("Unable to create docker client: %s", err)
+	}
+
+	tags := []string{"this_is_a_imagename"}
+	dockerfile := "/Users/dylanjohnson/go/src/github.com/helvellyn-io/container-go/build/Dockerfile"
+	err = docker.BuildImage(*client, tags, dockerfile)
+	if err != nil {
+		log.Println(err)
+	}
 	ctx := context.Background()
 
 	// Create a buffer
