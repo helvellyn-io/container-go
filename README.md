@@ -17,7 +17,7 @@ help:       help for this makefile.
 --test-build:   runs all tests
 --init-temporal-worker:  submits a temporal worker
 --start-temporal-worker:  starts the temporal worker 
---clean:  deletes the downloded artifacts and built images.
+--clean:  deletes the downloded artifacts, assocated images & terminates all temporal tasks.
 ```
 
 
