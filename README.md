@@ -1,5 +1,5 @@
 # container-go
-Container actions using Golang Docker SDK
+Container actions using Golang Docker SDK - For use with Temporal build task queues. 
 
 ```
 *cd build
@@ -9,4 +9,5 @@ Container actions using Golang Docker SDK
 *make test
 *make clean
 ```
+
 
