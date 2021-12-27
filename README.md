@@ -10,7 +10,7 @@ Prototyping continuous integration for microservices using Golang with Temporal 
 
 Instructions. 
 
-- [build/makefile help](build/Makefile) 
+- [Makefile](build/Makefile) 
 ```
 help:       help for this makefile.    
 --get-artifacts: will attempt to download the build artifacts as defined in vars.json "artifactProvider".
