@@ -20,7 +20,7 @@ func InitDockerBuild() (client.Client, []string, string) {
 		log.Fatalf("Unable to create docker client: %s", err)
 	}
 	//tags etc.
-	tags := []string{"helvellyn/TestImage"}
+	tags := []string{"helvellyn/testimage"}
 	dockerfile := "/Users/dylanjohnson/go/src/github.com/helvellyn-io/container-go/build/Dockerfile"
 	//build
 	err = BuildImage(*client, tags, dockerfile)
