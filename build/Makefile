@@ -1,4 +1,4 @@
-all: artifacts build push test 
+all: --get-artifacts --build-with-artifacts --push-artifacts --test-build --init-temporal-worker --start-temporal-worker
 
 help:      ## help for this makefile.    
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
