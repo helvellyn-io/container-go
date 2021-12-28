@@ -5,6 +5,7 @@ go 1.17
 require (
 	github.com/docker/docker v20.10.12+incompatible
 	github.com/hashicorp/go-getter v1.5.10
+	go.temporal.io/sdk v1.12.0
 )
 
 require (
@@ -15,15 +16,21 @@ require (
 	github.com/aws/aws-sdk-go v1.15.78 // indirect
 	github.com/bgentry/go-netrc v0.0.0-20140422174119-9fd32a8b3d3d // indirect
 	github.com/containerd/containerd v1.5.8 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/docker/distribution v2.7.1+incompatible // indirect
 	github.com/docker/go-connections v0.4.0 // indirect
 	github.com/docker/go-units v0.4.0 // indirect
+	github.com/facebookgo/clock v0.0.0-20150410010913-600d898af40a // indirect
+	github.com/gogo/googleapis v1.4.1 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
+	github.com/gogo/status v1.1.0 // indirect
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e // indirect
+	github.com/golang/mock v1.6.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
-	github.com/google/go-cmp v0.5.6 // indirect
+	github.com/google/uuid v1.3.0 // indirect
 	github.com/googleapis/gax-go/v2 v2.0.5 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
+	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
 	github.com/hashicorp/go-safetemp v1.0.0 // indirect
 	github.com/hashicorp/go-version v1.1.0 // indirect
@@ -36,10 +43,17 @@ require (
 	github.com/morikuni/aec v1.0.0 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/image-spec v1.0.2 // indirect
+	github.com/pborman/uuid v1.2.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/robfig/cron v1.2.0 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
+	github.com/stretchr/objx v0.3.0 // indirect
+	github.com/stretchr/testify v1.7.0 // indirect
 	github.com/ulikunitz/xz v0.5.8 // indirect
 	go.opencensus.io v0.22.3 // indirect
+	go.temporal.io/api v1.5.0 // indirect
+	go.uber.org/atomic v1.9.0 // indirect
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
 	golang.org/x/mod v0.4.2 // indirect
 	golang.org/x/net v0.0.0-20210913180222-943fd674d43e // indirect

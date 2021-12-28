@@ -1,17 +1,19 @@
 package git
 
-//https://github.com/helvellyn-io/container-go/blob/main/build/Dockerfile
-
 import (
 	"context"
 	"fmt"
+	"io/ioutil"
+	"log"
 	"os"
 
-	getter "github.com/hashicorp/go-getter"
+	"github.com/hashicorp/go-getter"
 )
 
-func GetBuildArtifacts() {
+//https://github.com/helvellyn-io/container-go/blob/main/build/Dockerfile
 
+func GetBuildArtifacts() (string, error) {
+	var e error
 	client := &getter.Client{
 		Ctx:  context.Background(),
 		Dst:  ".fromGit",
@@ -32,5 +34,19 @@ func GetBuildArtifacts() {
 		fmt.Fprintf(os.Stderr, "Error getting path %s: %v", client.Src, err)
 		os.Exit(1)
 	}
+	a := string(ReadFile())
+
+	return a, e
+}
+
+func ReadFile() []byte {
+
+	fileName := ".fromGit/Dockerfile"
+
+	data, err := ioutil.ReadFile(fileName)
+	if err != nil {
+		log.Panicf("failed reading data from file: %s", err)
+	}
+	return data
 
 }

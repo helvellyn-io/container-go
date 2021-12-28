@@ -13,4 +13,4 @@ test-build:   ##runs all tests
 	@go test ...
 
 clean: ## deletes the downloded artifacts and built images. 
-	@rm -f .fromGit/*
+	@rm -f .fromGit/* && rm -rf .fromGit
