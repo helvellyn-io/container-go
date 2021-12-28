@@ -1,3 +1,5 @@
+#This build process is temporary in order to provide a build badge :) 
+#The same functionality is provided by the main container-go project. 
 name: Go
 
 on:
