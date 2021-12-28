@@ -17,7 +17,7 @@ func main() {
 	}
 	defer c.Close()
 
-	w := worker.New(c, "builder", worker.Options{})
+	w := worker.New(c, "builder", worker.Options{}) // builder task q needs to match the start q declaration
 
 	w.RegisterWorkflow(app.BuildWorkflow)
 	w.RegisterActivity(git.GetBuildArtifacts)

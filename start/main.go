@@ -19,10 +19,10 @@ func main() {
 
 	workflowOptions := client.StartWorkflowOptions{
 		ID:        "builder_workflowID",
-		TaskQueue: "builder",
+		TaskQueue: "builder", // this is not idea as it needs to match in the
 	}
 
-	we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, app.BuildWorkflow, "Builder")
+	we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, app.BuildWorkflow, "Builder") // task needs to match
 	if err != nil {
 		log.Fatalln("Unable to execute workflow", err)
 	}
