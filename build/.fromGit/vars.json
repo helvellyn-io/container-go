@@ -1,8 +1,0 @@
-{
-    "tags": ["/helvellyn/my_image"],
-    "registry": "helvellyn",
-    "buildContext": ".fromGit/Dockerfile",
-    "owner": "dylan@helvellyn.io",
-    "app": "my_app",
-    "clouds": ["aws", "google"]
-}
